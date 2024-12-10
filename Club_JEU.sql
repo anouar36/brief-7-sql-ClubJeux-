@@ -1,8 +1,10 @@
 CREATE TABLE MEMBER (
-    id INT PRIMARY KEY AUTO_INCREMENT   ,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     pseudo VARCHAR(30) NOT NULL,
     email  VARCHAR(30) NOT NULL,
-    date_inscription DATE
+    date_inscription DATE,
+    id_abonnement  INT, 
+    FOREIGN KEY (id_abonnement) REFERENCES ABONNEMENT(id)
 );
 CREATE TABLE JEU (
     id INT PRIMARY KEY AUTO_INCREMENT ,
@@ -15,6 +17,8 @@ CREATE TABLE JEU (
 CREATE TABLE TOURNOI (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom_tournoi VARCHAR(30),
+    id_jeux INT,
+    FOREIGN KEY(id_jeux) REFERENCES JEU(id),
     date_tournoi  VARCHAR(30),
     annee_sortie DATE,
     recompenses VARCHAR(50)
