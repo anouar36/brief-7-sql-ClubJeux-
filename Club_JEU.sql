@@ -60,3 +60,12 @@ INSERT INTO ABONNEMENT (id, type_abonnement, date_debut, date_fin) VALUES
 (5, 'Standard', '2024-03-01', '2025-03-01'),
 (6, 'Basic', '2024-06-01', '2025-06-01');
 
+
+INSERT INTO MEMBER (id, pseudo, email, date_inscription, id_abonnement) VALUES
+(1, 'Ahmed', 'player1@email.com', '2023-01-01', 1),
+(2, 'Khalid', 'player2@email.com', '2023-06-15', 2),
+(3, 'Fatima', 'player3@email.com', '2024-02-10', 3),
+(4, 'Rachid' , 'player4@email.com', '2024-03-01', 4),
+(5, 'Sanae', 'player5@email.com', '2024-07-20', 5),
+(6, 'Yassine' , 'player6@email.com', '2024-09-15', 6);
+
