@@ -62,12 +62,12 @@ INSERT INTO ABONNEMENT (id, type_abonnement, date_debut, date_fin) VALUES
 
 
 INSERT INTO MEMBER (id, pseudo, email, date_inscription, id_abonnement) VALUES
-(1, 'Ahmed', 'player1@email.com', '2023-01-01', 1),
-(2, 'Khalid', 'player2@email.com', '2023-06-15', 2),
-(3, 'Fatima', 'player3@email.com', '2024-02-10', 3),
-(4, 'Rachid' , 'player4@email.com', '2024-03-01', 4),
-(5, 'Sanae', 'player5@email.com', '2024-07-20', 5),
-(6, 'Yassine' , 'player6@email.com', '2024-09-15', 6);
+(1, 'Ahmed', 'Ahmed@email.com', '2023-01-01', 1),
+(2, 'Khalid', 'Khalid@email.com', '2023-06-15', 2),
+(3, 'Fatima', 'Fatima@email.com', '2024-02-10', 3),
+(4, 'Rachid' , 'Rachid@email.com', '2024-03-01', 4),
+(5, 'Sanae', 'Sanae@email.com', '2024-07-20', 5),
+(6, 'Yassine' , 'Yassine@email.com', '2024-09-15', 6);
 
 INSERT INTO JEU (id, titre, studio_developpement, annee_sortie, genre, multijoueur)VALUES
 (1, 'Minecraft', 'Studio X', '2024-01-01', 'Action', 'true'),
@@ -85,3 +85,18 @@ INSERT INTO TOURNOI(id, nom_tournoi, id_jeux, date_tournoi, annee_sortie, recomp
 (5, 'Crash Bandicoot', 6, '2024-11-10', '2024-12-01', '1500 USD'),
 (6, 'Fortnite', 1, '2024-12-05', '2025-01-01', '2500 USD');
 
+INSERT INTO ENPRUNTER (id, id_member, id_jeux, date_emprunt, date_retour_prevue, date_retour_reelle) VALUES
+(1, 1, 3, '2024-07-01', '2024-07-15','2024-07-12'),
+(2, 2, 5, '2024-08-01', '2024-08-15' , '2024-08-18') ,
+(3, 3, 4, '2024-09-05' , '2024-09-20', '2024-09-19'),
+(4, 4, 2, '2024-10-01', '2024-10-15', '2024-10-10') ,
+(5, 5, 6, '2024-11-01', '2024-11-15', '2024-11-13'),
+(6, 6, 1, '2024-12-01', '2024-12-15', '2024-12-10' ) ;
+
+INSERT INTO PARTICIPER (id, id_member, id_tournoi, score, range_final) VALUES
+(1, 1, 2, 1200, '1st'),
+(2, 2, 3, 900, '3rd'),
+(3, 3, 1, 1500, '1st'),
+(4, 4, 4, 800, '4th'),
+(5, 5, 5, 1000, '2nd'),
+(6, 6, 6, 1100, '2nd');
