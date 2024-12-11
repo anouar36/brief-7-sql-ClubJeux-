@@ -100,3 +100,66 @@ INSERT INTO PARTICIPER (id, id_member, id_tournoi, score, range_final) VALUES
 (4, 4, 4, 800, '4th'),
 (5, 5, 5, 1000, '2nd'),
 (6, 6, 6, 1100, '2nd');
+
+
+
+-------------------------------------Travail à Réaliser-------------------------
+-- Requêtes de Base
+
+   -- *Afficher la liste des jeux
+      SELECT * FROM  JEU
+
+
+   -- Afficher les détails d'un tournoi spécifique à partir de son nom.
+      SELECT * FROM  TOURNOI WHERE nom_tournoi='Minecraft'
+
+
+   -- Lister les emprunts en cours, incluant le pseudo du membre et le titre du jeu.
+      SELECT * FROM Enprunter 
+
+
+-- Requêtes avec Jointures
+
+   --Lister les membres ayant participé à un tournoi, avec leur pseudo, le nom du tournoi, et leur rang final.
+     SELECT MEMBER.pseudo,PARTICIPER.score,TOURNOI.nom_tournoi
+     FROM MEMBER
+     INNER JOIN PARTICIPER 
+     on MEMBER.id = PARTICIPER.id_member 
+     INNER JOIN TOURNOI
+     ON TOURNOI.id=PARTICIPER.id_tournoi ;
+
+   -- Trouver les membres qui ont souscrit à un abonnement annuel.
+     SELECT MEMBER.pseudo,ABONNEMENT.date_debut  
+     FROM MEMBER INNER JOIN ABONNEMENT 
+     on MEMBER.id_abonnement = ABONNEMENT.id  ;
+
+   -- Trouver les jeux empruntés par un membre spécifique (via son pseudo).Trouver les jeux empruntés par un membre spécifique (via son pseudo).
+      SELECT MEMBER.pseudo,JEU.titre  
+      FROM MEMBER INNER JOIN Enprunter 
+      on MEMBER.id = Enprunter.id_member 
+      INNER JOIN JEU 
+      on Enprunter.id_jeux = JEU.id  ;
+
+   -- Lister tous les emprunts, en incluant le pseudo du membre et les informations sur le jeu (titre et studio de développement).
+      SELECT MEMBER.pseudo,JEU.titre,JEU.studio_developpement,JEU.annee_sortie,JEU.genre,JEU.multijoueur 
+      FROM MEMBER INNER JOIN Enprunter 
+      on MEMBER.id = Enprunter.id_member 
+      INNER JOIN JEU 
+      on Enprunter.id_jeux = JEU.id  ;
+
+   -- Afficher la liste des membres et le type d'abonnement auquel ils sont associés.
+      SELECT MEMBER.pseudo,ABONNEMENT.type_abonnement  
+      FROM MEMBER INNER JOIN ABONNEMENT 
+      on MEMBER.id_abonnement = ABONNEMENT.id  ;
+
+
+
+
+
+
+
+
+
+
+
+
