@@ -151,6 +151,12 @@ INSERT INTO PARTICIPER (id, id_member, id_tournoi, score, range_final) VALUES
       SELECT MEMBER.pseudo,ABONNEMENT.type_abonnement  
       FROM MEMBER INNER JOIN ABONNEMENT 
       on MEMBER.id_abonnement = ABONNEMENT.id  ;
+   --   Calculer le nombre total de jeux disponibles par genre.
+      SELECT genre, MAX(id) 
+      AS jadid 
+      FROM JEU
+      GROUP BY genre ;
+
 
 
 
