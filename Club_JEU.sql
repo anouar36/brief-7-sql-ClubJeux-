@@ -69,3 +69,11 @@ INSERT INTO MEMBER (id, pseudo, email, date_inscription, id_abonnement) VALUES
 (5, 'Sanae', 'player5@email.com', '2024-07-20', 5),
 (6, 'Yassine' , 'player6@email.com', '2024-09-15', 6);
 
+INSERT INTO JEU (id, titre, studio_developpement, annee_sortie, genre, multijoueur)VALUES
+(1, 'Minecraft', 'Studio X', '2024-01-01', 'Action', 'true'),
+(2, 'Call of Duty', 'Studio Y', '2023-05-20', 'RPG', 'false'),
+(3, 'Resident Evil 4', 'Studio Z', '2024-03-15', 'Shooter', 'true'),
+(4, 'Grand Theft Auto', 'Studio W', '2022-11-10', 'Puzzle', 'true'),
+(5, 'Fortnite', 'Studio V', '2024-06-01', 'Racing', 'false'),
+(6, 'Crash Bandicoot', 'Studio U', '2023-08-22', 'Adventure', 'true');
+
