@@ -77,3 +77,11 @@ INSERT INTO JEU (id, titre, studio_developpement, annee_sortie, genre, multijoue
 (5, 'Fortnite', 'Studio V', '2024-06-01', 'Racing', 'false'),
 (6, 'Crash Bandicoot', 'Studio U', '2023-08-22', 'Adventure', 'true');
 
+INSERT INTO TOURNOI(id, nom_tournoi, id_jeux, date_tournoi, annee_sortie, recompenses) VALUES
+(1, 'Minecraft', 3, '2024-07-10', '2024-09-01', '1000 USD'),
+(2, 'Call of Duty', 5, '2024-08-15', '2024-11-01', '500 USD'),
+(3, 'Resident Evil 4', 4, '2024-09-01', '2024-12-01', '2000 USD'),
+(4, 'Grand Theft Auto', 2, '2024-10-05', '2024-11-01', '3000 USD'),
+(5, 'Crash Bandicoot', 6, '2024-11-10', '2024-12-01', '1500 USD'),
+(6, 'Fortnite', 1, '2024-12-05', '2025-01-01', '2500 USD');
+
